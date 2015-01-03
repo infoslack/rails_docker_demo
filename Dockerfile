@@ -1,0 +1,1 @@
+FROM infoslack/rails:onbuild

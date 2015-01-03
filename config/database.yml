@@ -1,0 +1,7 @@
+production:
+  adapter: postgresql
+  enconding: unicode
+  pool: 5
+  username: postgres
+  database: app_rails_prod
+  host: db
