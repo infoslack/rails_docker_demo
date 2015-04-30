@@ -20,3 +20,8 @@ deployment:
     commands:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
       - docker push infoslack/docker-book
+
+  production:
+    branch: master
+    commands:
+      - git clone https://github.com/infoslack/rails_docker_demo.git /tmp/demo
