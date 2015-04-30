@@ -6,6 +6,10 @@ dependencies:
   override:
     - docker build -t infoslack/docker-book .
 
+database:
+  override:
+    - /bin/true
+
 test:
   override:
     - docker run -d -p 3000:3000 infoslack/docker-book; sleep 10
