@@ -1,1 +1,1 @@
-FROM infoslack/rails:onbuild
+FROM ruby:2.2.2:onbuild

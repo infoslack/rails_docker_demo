@@ -7,21 +7,10 @@ db:
 
 app:
   build: .
-  command: bundle exec puma -p 9001 -e production
-  environment:
-    - RAILS_ENV=production
+  command: bundle exec rails s -b 0.0.0.0 -p 3000
   volumes:
     - .:/usr/src/app
-  expose:
-    - '9001'
+  ports:
+    - '8080:3000'
   links:
     - db
-
-web:
-  image: infoslack/nginx-puma
-  volumes_from:
-    - app
-  ports:
-    - '80:80'
-  links:
-    - app
