@@ -8,7 +8,6 @@ gem "uglifier", ">= 1.3.0"
 gem "jbuilder", "~> 2.0"
 gem "jquery-rails"
 gem "devise"
-gem "mina"
 
 group :development, :test do
   gem "byebug"
