@@ -1,1 +1,1 @@
-FROM ruby:2.2.2:onbuild
+FROM ruby:2.2.2-onbuild
