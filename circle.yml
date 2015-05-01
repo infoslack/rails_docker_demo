@@ -6,13 +6,10 @@ dependencies:
   override:
     - docker build -t infoslack/docker-book .
 
-database:
-  override:
-    - /bin/true
-
 test:
   override:
-    - /bin/true
+    - docker run -d -p 3000:3000 infoslack/docker-book; sleep 10
+    - curl --retry 10 --retry-delay 5 -v http://localhost:3000
 
 deployment:
   hub:
@@ -24,4 +21,4 @@ deployment:
   production:
     branch: master
     commands:
-      - git clone https://github.com/infoslack/rails_docker_demo.git /tmp/demo
+      - sudo ./deploy.sh
