@@ -6,9 +6,9 @@ dependencies:
   override:
     - sudo ./install-compose.sh
 
-#database:
-#  override:
-#    - /bin/true
+database:
+  override:
+    - /bin/true
 
 test:
   override:
