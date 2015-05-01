@@ -6,13 +6,13 @@ dependencies:
   override:
     - sudo ./install-compose.sh
 
-database:
-  override:
-    - /bin/true
+#database:
+#  override:
+#    - /bin/true
 
 test:
   override:
-    - docker-compose up -d
+    - docker-compose run -d --no-deps app; sleep 10
     - curl --retry 10 --retry-delay 5 -v http://localhost:8080
 
 deployment:
